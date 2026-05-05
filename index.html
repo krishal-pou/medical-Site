@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chowkbazar Medical - Trusted Medical Store in Chowk Bazar, Bharatpur, Chitwan</title>
+    <meta name="description" content="Chowkbazar Medical - Your trusted medical store in Bharatpur-06, Chitwan, Nepal. Genuine medicines, affordable prices, and fast delivery.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="navigateTo('index.html')">
+                <div class="logo-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-title">Chowkbazar</div>
+                    <div class="logo-subtitle">Medical</div>
+                </div>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li>
+                        <a href="https://wa.me/9779845087710" target="_blank" class="nav-link whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Trusted Medical Store<br>in Chowk Bazar</h1>
+            <p>Your one-stop destination for genuine medicines, healthcare products, and expert guidance in Chowk Bazar, Bharatpur.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="navigateTo('products.html')">Browse Products</button>
+                <a href="https://wa.me/9779845087710?text=Hello%2C%20I%20would%20like%20to%20order%20medicines." target="_blank" class="btn btn-success">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">10+</div>
+                    <div class="stat-label">Years Serving</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">WhatsApp Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p class="section-subtitle">We are committed to providing the best healthcare products with unmatched service quality.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Genuine Medicines</h3>
+                    <p>We source all our medicines directly from authorized distributors ensuring 100% authenticity.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Affordable Prices</h3>
+                    <p>Competitive pricing on all products with regular discounts and special offers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Easy Pickup</h3>
+                    <p>Order via WhatsApp and collect your medicines conveniently from our store in Chowk Bazar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2>Product Categories</h2>
+            <p class="section-subtitle">Browse our wide range of medicines and health products by category.</p>
+            <div class="categories-grid">
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-heart"></i>
+                    <span>Cardio</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Diabetic</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-capsules"></i>
+                    <span>Gastric</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-prescription-bottle"></i>
+                    <span>NSAID</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-sparkles"></i>
+                    <span>Dermatology</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-eye"></i>
+                    <span>Eye Care</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-shield"></i>
+                    <span>Antihistamine</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-wind"></i>
+                    <span>Cough & Cold</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-lungs"></i>
+                    <span>Asthma</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-flask"></i>
+                    <span>Antibiotics</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-baby"></i>
+                    <span>Baby Care</span>
+                </div>
+                <div class="category-card" onclick="navigateTo('products.html')">
+                    <i class="fas fa-flower"></i>
+                    <span>Cosmetics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Slider -->
+    <section class="shop-slider-section">
+        <div class="container">
+            <h2>Shop Photos</h2>
+            <p class="section-subtitle">A sliding look inside Chowkbazar Medical.</p>
+
+            <div class="shop-slider" id="shopSlider">
+                <div class="shop-slider-track" id="shopSliderTrack">
+                    <div class="shop-slide active">
+                        <img src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Shop interior">
+                    </div>
+                    <div class="shop-slide">
+                        <img src="https://images.pexels.com/photos/7615467/pexels-photo-7615467.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Medicine shelf">
+                    </div>
+                    <div class="shop-slide">
+                        <img src="https://images.pexels.com/photos/3683085/pexels-photo-3683085.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pharmacy counter">
+                    </div>
+                </div>
+
+                <button class="shop-slider-btn shop-slider-prev" id="shopSliderPrev" aria-label="Previous photo">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="shop-slider-btn shop-slider-next" id="shopSliderNext" aria-label="Next photo">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="shop-slider-dots" id="shopSliderDots">
+                    <button class="shop-slider-dot active" data-slide="0" aria-label="Go to photo 1"></button>
+                    <button class="shop-slider-dot" data-slide="1" aria-label="Go to photo 2"></button>
+                    <button class="shop-slider-dot" data-slide="2" aria-label="Go to photo 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <!-- <section class="cta-banner">
+        <div class="container">
+            <h2>Need Medicines Fast?</h2>
+            <p>WhatsApp us your prescription or medicine name and we will deliver to your doorstep.</p>
+            <a href="https://wa.me/9779845087710?text=Hello%2C%20I%20need%20medicines." target="_blank" class="btn btn-success-lg">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp — 9845087710
+            </a>
+        </div>
+    </section> -->
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+        <p>⚠ Important: Always consult a licensed doctor before taking any medicine. Self-medication can be harmful to your health.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 16px; font-weight: 700; color: white;">Chowkbazar Medical</div>
+                            <div style="font-size: 12px; color: #60a5fa;">Bharatpur, Chitwan</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; color: #9ca3af; margin-top: 10px;">Your trusted medical store in Chitwan, providing genuine medicines and health products.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Bharatpur-06, Chitwan, Nepal</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:9845087710">9845087710</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/9779845087710" target="_blank">WhatsApp Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Registration</h4>
+                    <ul>
+                        <li><strong>PAN Number:</strong> 106796322</li>
+                        <li><strong>DDA Register:</strong> 3780418043604</li>
+                        <li><strong>Status:</strong> Active & Licensed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chowkbazar Medical. All rights reserved.</p>
+                <p class="disclaimer-small">⚠ Consult a doctor before using any medicine. Self-medication can be harmful.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9779845087710?text=Hello%2C%20I%20need%20assistance." target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

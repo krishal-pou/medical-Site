@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Chowkbazar Medical</title>
+    <meta name="description" content="Browse our wide range of genuine medicines and health products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="navigateTo('index.html')">
+                <div class="logo-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-title">Chowkbazar</div>
+                    <div class="logo-subtitle">Medical</div>
+                </div>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="products.html" class="nav-link active">Products</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li>
+                        <a href="https://wa.me/9779845087710" target="_blank" class="nav-link whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Our Products</h1>
+        <p>Browse genuine medicines and health products</p>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-wrapper">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-card sidebar-search">
+                        <h3>Search Products</h3>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search medicines...">
+                    </div>
+                    <div class="sidebar-card sidebar-categories">
+                        <h3>Categories</h3>
+                        <button type="button" class="filter-btn active" data-category="all" onclick="filterCategory('all')">
+                            All Products
+                            <span class="count" id="count-all">36</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="cardio" onclick="filterCategory('cardio')">
+                            <i class="fas fa-heart"></i> Cardio
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="diabetic" onclick="filterCategory('diabetic')">
+                            <i class="fas fa-heartbeat"></i> Diabetic
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="gastric" onclick="filterCategory('gastric')">
+                            <i class="fas fa-capsules"></i> Gastric
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="nsaid" onclick="filterCategory('nsaid')">
+                            <i class="fas fa-prescription-bottle"></i> NSAID
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="dermatology" onclick="filterCategory('dermatology')">
+                            <i class="fas fa-sparkles"></i> Dermatology
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="eyecare" onclick="filterCategory('eyecare')">
+                            <i class="fas fa-eye"></i> Eye Care
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="antihistamine" onclick="filterCategory('antihistamine')">
+                            <i class="fas fa-shield"></i> Antihistamine
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="cough" onclick="filterCategory('cough')">
+                            <i class="fas fa-wind"></i> Cough & Cold
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="asthma" onclick="filterCategory('asthma')">
+                            <i class="fas fa-lungs"></i> Asthma
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="antibiotics" onclick="filterCategory('antibiotics')">
+                            <i class="fas fa-flask"></i> Antibiotics
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="babycare" onclick="filterCategory('babycare')">
+                            <i class="fas fa-baby"></i> Baby Care
+                            <span class="count">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="cosmetics" onclick="filterCategory('cosmetics')">
+                            <i class="fas fa-flower"></i> Cosmetics
+                            <span class="count">3</span>
+                        </button>
+                    </div>
+                </aside>
+
+                <div class="mobile-filters-panel">
+                    <div class="sidebar-card mobile-search-card">
+                        <h3>Search Products</h3>
+                        <input type="text" id="mobileSearchInput" class="search-input" placeholder="Search medicines...">
+                    </div>
+
+                    <details class="mobile-category-picker" id="mobileCategoryPicker">
+                        <summary class="mobile-category-toggle"><span id="mobileCategoryLabel">Select Category</span></summary>
+                        <div class="mobile-category-list">
+                            <button type="button" class="filter-btn active" data-category="all" onclick="filterCategory('all')">
+                                All Products
+                                <span class="count" id="count-all-mobile">36</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="cardio" onclick="filterCategory('cardio')">
+                                <i class="fas fa-heart"></i> Cardio
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="diabetic" onclick="filterCategory('diabetic')">
+                                <i class="fas fa-heartbeat"></i> Diabetic
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="gastric" onclick="filterCategory('gastric')">
+                                <i class="fas fa-capsules"></i> Gastric
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="nsaid" onclick="filterCategory('nsaid')">
+                                <i class="fas fa-prescription-bottle"></i> NSAID
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="dermatology" onclick="filterCategory('dermatology')">
+                                <i class="fas fa-sparkles"></i> Dermatology
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="eyecare" onclick="filterCategory('eyecare')">
+                                <i class="fas fa-eye"></i> Eye Care
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="antihistamine" onclick="filterCategory('antihistamine')">
+                                <i class="fas fa-shield"></i> Antihistamine
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="cough" onclick="filterCategory('cough')">
+                                <i class="fas fa-wind"></i> Cough & Cold
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="asthma" onclick="filterCategory('asthma')">
+                                <i class="fas fa-lungs"></i> Asthma
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="antibiotics" onclick="filterCategory('antibiotics')">
+                                <i class="fas fa-flask"></i> Antibiotics
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="babycare" onclick="filterCategory('babycare')">
+                                <i class="fas fa-baby"></i> Baby Care
+                                <span class="count">3</span>
+                            </button>
+                            <button type="button" class="filter-btn" data-category="cosmetics" onclick="filterCategory('cosmetics')">
+                                <i class="fas fa-flower"></i> Cosmetics
+                                <span class="count">3</span>
+                            </button>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Products Grid -->
+                <main class="products-main">
+                    <div class="results-info">
+                        <p id="resultsText">Showing 36 products</p>
+                        <button class="clear-filters-btn" id="clearFiltersBtn" style="display:none;" onclick="clearFilters()">Clear Filters</button>
+                    </div>
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be loaded here by JavaScript -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+        <p>⚠ Consult a doctor before using any medicine. All medicines require a valid prescription.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 16px; font-weight: 700; color: white;">Chowkbazar Medical</div>
+                            <div style="font-size: 12px; color: #60a5fa;">Bharatpur, Chitwan</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; color: #9ca3af; margin-top: 10px;">Your trusted medical store in Chitwan, providing genuine medicines and health products.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Bharatpur-06, Chitwan, Nepal</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:9845087710">9845087710</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/9779845087710" target="_blank">WhatsApp Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Registration</h4>
+                    <ul>
+                        <li><strong>PAN Number:</strong> 106796322</li>
+                        <li><strong>DDA Register:</strong> 3780418043604</li>
+                        <li><strong>Status:</strong> Active & Licensed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chowkbazar Medical. All rights reserved.</p>
+                <p class="disclaimer-small">⚠ Consult a doctor before using any medicine. Self-medication can be harmful.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9779845087710?text=Hello%2C%20I%20need%20assistance." target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="products-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
