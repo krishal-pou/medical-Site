@@ -1496,6 +1496,9 @@ body {
     }
 
     .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
     /* Team photo / leadership fixes on small screens */
     .team-member {
         align-items: center;
@@ -1534,9 +1537,9 @@ body {
         font-size: 14px;
         padding: 0 6px;
     }
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-@media (max-width: 360px) {
+}
+
+@media (max-width: 400px) {
     /* Very small screens: reduce leader card sizes to prevent overflow */
     .team-member {
         gap: 10px;
@@ -1573,6 +1576,43 @@ body {
 
     .team-grid {
         gap: 18px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 420px) {
+    .about-card {
+        padding: 16px;
+    }
+
+    .team-grid {
+        gap: 14px;
+    }
+
+    .team-member {
+        gap: 8px;
+    }
+
+    .team-photo {
+        width: 168px;
+        height: 168px;
+        max-width: 100%;
+    }
+
+    .team-info h3 {
+        font-size: 15px;
+        line-height: 1.25;
+    }
+
+    .team-role {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .team-desc {
+        font-size: 12px;
+        line-height: 1.55;
+        padding: 0 4px;
+        text-align: center;
     }
 }
 
